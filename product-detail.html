@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nara Café | Product Detail</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Nara Café</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="products.html" class="active">Menu</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <section class="product-detail-container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="products.html">Menu</a>
+            <span>/</span>
+            <span class="current">Caramel Machiato</span>
+        </div>
+
+        <div class="product-detail">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="https://i.pinimg.com/736x/fe/74/f8/fe74f82e9eb922b7ec2964371f12e5d1.jpg" alt="Cappuccino"
+                        id="main-product-image">
+                </div>
+                <div class="product-options">
+                    <div class="option-group"></div>
+                </div>
+                <script>
+                    document.querySelectorAll('.option-group').forEach(group => {
+                        const buttons = group.querySelectorAll('.option-btn');
+                        buttons.forEach(button => {
+                            button.addEventListener('click', () => {
+                                // Hapus 'active' dari semua tombol dalam grup ini
+                                buttons.forEach(btn => btn.classList.remove('active'));
+                                // Tambahkan 'active' ke tombol yang diklik
+                                button.classList.add('active');
+                            });
+                        });
+                    });
+                </script>
+            </div>
+
+            <div class="product-info">
+                <h1>Caramel Machiato</h1>
+                <div class="product-meta">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(42 reviews)</span>
+                    </div>
+                    <div class="availability">
+                        <i class="fas fa-check-circle"></i> In Stock
+                    </div>
+                </div>
+
+                <div class="product-price">
+                    <span class="current-price">Rp 40.000</span>
+                    <span class="old-price">Rp 44.000</span>
+                    <span class="discount">-10%</span>
+                </div>
+
+                <div class="product-description">
+                    <p>Espresso yang kaya dipadukan dengan susu kukus dan busa lembut. Cappuccino khas kami dibuat dari
+                        biji kopi premium dan disajikan dalam cangkir yang telah dipanaskan terlebih dahulu untuk
+                        menjaga suhu sempurna.</p>
+                </div>
+
+                <div class="product-actions">
+                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                    <button class="btn-outline buy-now-btn">Buy Now</button>
+                    <button class="icon-btn wishlist-btn"><i class="far fa-heart"></i></button>
+                    <button class="icon-btn share-btn"><i class="fas fa-share-alt"></i></button>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="product-tabs">
+            <div class="tabs-header">
+                
+                <button class="tab-btn" data-tab="reviews">Reviews</button>
+            </div>
+
+            <div class="tabs-content">
+                
+
+                <div class="tab-panel" id="reviews">
+                    <div class="reviews-summary">
+                        <div class="average-rating">
+                            <div class="rating-number">4.5</div>
+                            <div class="rating-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="rating-count">Based on 42 reviews</div>
+                        </div>
+                        <div class="rating-breakdown">
+                            <div class="rating-bar">
+                                <span class="rating-level">5 stars</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 70%"></div>
+                                </div>
+                                <span class="rating-percent">70%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="rating-level">4 stars</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 20%"></div>
+                                </div>
+                                <span class="rating-percent">20%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="rating-level">3 stars</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 5%"></div>
+                                </div>
+                                <span class="rating-percent">5%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="rating-level">2 stars</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 3%"></div>
+                                </div>
+                                <span class="rating-percent">3%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="rating-level">1 star</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 2%"></div>
+                                </div>
+                                <span class="rating-percent">2%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        // Ambil semua tombol tab
+                        const tabButtons = document.querySelectorAll('.tab-btn');
+                        // Ambil semua panel isi
+                        const tabPanels = document.querySelectorAll('.tab-panel');
+
+                        tabButtons.forEach(button => {
+                            button.addEventListener('click', () => {
+                                const targetTab = button.getAttribute('data-tab');
+
+                                // Hapus class 'active' dari semua tombol dan panel
+                                tabButtons.forEach(btn => btn.classList.remove('active'));
+                                tabPanels.forEach(panel => panel.classList.remove('active'));
+
+                                // Tambahkan class 'active' ke tombol dan panel yang dipilih
+                                button.classList.add('active');
+                                document.getElementById(targetTab).classList.add('active');
+                            });
+                        });
+                    </script>
+    </section>
+
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Join Our Coffee Club</h2>
+            <p>Subscribe to receive updates on new menu items, special offers, and coffee tips.</p>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nara Café</h3>
+                <p>Serving premium coffee and pastries since 2010.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 7am - 8pm</p>
+                <p>Saturday - Sunday: 8am - 9pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Coffee Street, City</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@naracafe.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Nara Café. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/product-detail.js"></script>
+    <script src="js/auth-check.js"></script>
+    <script src="js/redirect.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>

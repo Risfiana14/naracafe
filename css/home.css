@@ -1,0 +1,79 @@
+/* Default: nav tampil normal di desktop */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+/* Di layar kecil (mobile), nav disembunyikan kecuali ada class active */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+
+/* Default (desktop) */
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+    nav {
+        position: absolute;
+        top: 60px;
+        /* tinggi header */
+        right: 0;
+        width: 100%;
+        background-color: white;
+        display: none;
+        z-index: 1000;
+        border-top: 1px solid #ccc;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    nav ul li {
+        text-align: left;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}

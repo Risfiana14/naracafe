@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nara Café | Articles</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/articles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Nara Café</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="articles.html" class="active">Articles</a></li>
+                <li><a href="products.html">Menu</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>Coffee Stories</h1>
+            <p>Explore our articles about coffee culture, brewing techniques, and more</p>
+        </div>
+    </section>
+
+    <section class="articles-container">
+        <div class="articles-filter">
+            <h3>Categories</h3>
+            <ul class="filter-list">
+                <li><a href="#" class="active" data-category="Semua">Semua Artikel</a></li>
+                <li><a href="#" data-category="Teknik Penyeduhan">Teknik Penyeduhan</a></li>
+                <li><a href="#" data-category="Biji Kopi">Biji Kopi</a></li>
+                <li><a href="#" data-category="Budaya Kopi">Budaya Kopi</a></li>
+                <li><a href="#" data-category="Resep">Resep</a></li>
+            </ul>
+        </div>
+
+        <div class="articles-grid">
+            <!-- Articles will be loaded dynamically from localStorage -->
+            <div class="article-card" data-category="Teknik Penyeduhan">
+                <div class="article-image">
+                    <img src="https://i.pinimg.com/736x/6a/98/41/6a9841a5c2768b5c638a0777e7789f38.jpg" alt="Biji Kopi">
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="category">Teknik Penyeduhan</span>
+                        <span class="date">May 15, 2023</span>
+                    </div>
+                    <h3>Seni Memanggang Kopi</h3>
+                    <p>Setiap tegukan kopi yang kita nikmati menyimpan perjalanan panjang yang dimulai jauh sebelum
+                        diseduh. Salah satu tahap paling menentukan dalam perjalanan itu adalah proses sangrai—sebuah
+                        momen penting di mana biji kopi mentah diubah menjadi sumber aroma dan rasa yang memikat.</p>
+                    <a href="article-detail.html?id=1" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to receive our latest articles and coffee tips directly to your inbox.</p>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nara Café</h3>
+                <p>Serving premium coffee and pastries since 2010.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 7am - 8pm</p>
+                <p>Saturday - Sunday: 8am - 9pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Coffee Street, City</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@naracafe.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Nara Café. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/articles.js"></script>
+    <script src="js/auth-check.js"></script>
+    <script src="js/redirect.js"></script>
+</body>
+
+</html>

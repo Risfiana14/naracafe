@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nara Café | Manage Transactions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/admin-transactions.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Nara Café</h2>
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Admin User">
+                    </div>
+                    <div>
+                        <div class="user-name">Risfiana</div>
+                        <div class="user-role">Administrator</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-menu">
+                <h3>Main Menu</h3>
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="admin-articles.html"><i class="fas fa-newspaper"></i> Manage Articles</a></li>
+                    <li><a href="admin-products.html"><i class="fas fa-coffee"></i> Manage Products</a></li>
+                    <li><a href="admin-users.html"><i class="fas fa-users"></i> Manage Users</a></li>
+                    <li><a href="admin-transactions.html" class="active"><i class="fas fa-receipt"></i> Manage
+                            Transactions</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-menu">
+                <h3>Account</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-user-cog"></i> Settings</a></li>
+                    <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="admin-header">
+                <h1>Manage Transactions</h1>
+                <div class="header-actions">
+                    <button class="btn"><i class="fas fa-download"></i> Export Report</button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table-header">
+                    <h2>All Transactions</h2>
+                    <div class="table-actions">
+                        <div class="search-box">
+                            <input type="text" placeholder="Search transactions...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <select class="filter-select">
+                            <option value="all">All Status</option>
+                            <option value="completed">Completed</option>
+                            <option value="processing">Processing</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </div>
+                </div>
+
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Payment Method</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+
+                <div class="table-footer">
+                    <div class="showing-entries">
+                        Showing 1 to 5 of 50 entries
+                    </div>
+                    <div class="table-pagination">
+                        <button class="page-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn">4</button>
+                        <button class="page-btn">5</button>
+                        <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth-check.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/admin-transactions.js"></script>
+</body>
+
+</html>

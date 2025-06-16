@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nara Café | Article</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/article-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Nara Café</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="articles.html" class="active">Articles</a></li>
+                <li><a href="products.html">Menu</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <article class="article-container">
+        <div class="article-header">
+            <div class="article-meta">
+                <span class="category">Brewing Techniques</span>
+                <span class="date">May 15, 2023</span>
+                <span class="author">By James Wilson</span>
+            </div>
+            <h1 class="article-title">Seni Memanggang Kopi</h1>
+            <div class="article-share">
+                <span>Share:</span>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="article-featured-image">
+            <img src="https://i.pinimg.com/736x/6a/98/41/6a9841a5c2768b5c638a0777e7789f38.jpg" alt="Biji Kopi">
+        </div>
+
+        <div class="article-content">
+            <!-- Article content will be loaded dynamically -->
+            <p class="article-intro">Setiap tegukan kopi yang kita nikmati menyimpan perjalanan panjang yang dimulai
+                jauh sebelum diseduh. Salah satu tahap paling menentukan dalam perjalanan itu adalah proses
+                sangrai—sebuah momen penting di mana biji kopi mentah diubah menjadi sumber aroma dan rasa yang memikat.
+            </p>
+        </div>
+
+        <div class="article-author">
+            <div class="author-image">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Wilson">
+            </div>
+            <div class="author-info">
+                <h3>James Wilson</h3>
+                <p class="author-title">Head Barista & Coffee Educator</p>
+                <p class="author-bio">James has been in the coffee industry for over 15 years and is passionate about
+                    sharing his knowledge of coffee cultivation, roasting, and brewing techniques.</p>
+                <div class="author-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="related-articles">
+            <h3>You May Also Like</h3>
+            <div class="related-grid">
+                <!-- Related articles will be loaded dynamically -->
+            </div>
+        </div>
+
+        <div class="article-comments">
+            <h3>Comments (4)</h3>
+
+            <div class="comment">
+                <div class="comment-avatar">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Lisa Johnson">
+                </div>
+                <div class="comment-content">
+                    <div class="comment-header">
+                        <h4>Lisa Johnson</h4>
+                        <span class="comment-date">June 2, 2023</span>
+                    </div>
+                    <p>This was such an informative article! I've always wondered about the differences between light
+                        and dark roasts. Now I understand why I prefer medium roasts - they have that perfect balance of
+                        flavor.</p>
+                    <button class="reply-btn">Reply</button>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-avatar">
+                    <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Robert Chen">
+                </div>
+                <div class="comment-content">
+                    <div class="comment-header">
+                        <h4>Robert Chen</h4>
+                        <span class="comment-date">June 5, 2023</span>
+                    </div>
+                    <p>I recently bought a home roaster and this article has been incredibly helpful in understanding
+                        the process. Would love to see a follow-up piece on home roasting tips!</p>
+                    <button class="reply-btn">Reply</button>
+                </div>
+            </div>
+
+            <div class="comment-form">
+                <h3>Leave a Comment</h3>
+                <form id="comment-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="comment-name">Name</label>
+                            <input type="text" id="comment-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-email">Email</label>
+                            <input type="email" id="comment-email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-content">Comment</label>
+                        <textarea id="comment-content" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="comment-save">
+                        <label for="comment-save">Save my name and email for the next time I comment</label>
+                    </div>
+                    <button type="submit" class="btn">Post Comment</button>
+                </form>
+            </div>
+        </div>
+    </article>
+
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Enjoyed this article?</h2>
+            <p>Subscribe to receive more coffee insights and stories directly to your inbox.</p>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nara Café</h3>
+                <p>Serving premium coffee and pastries since 2010.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 7am - 8pm</p>
+                <p>Saturday - Sunday: 8am - 9pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Coffee Street, City</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@naracafe.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Nara Café. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/article-detail.js"></script>
+</body>
+
+</html>

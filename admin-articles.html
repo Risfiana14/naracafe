@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nara Café | Manage Articles</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/admin-articles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Nara Café</h2>
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Admin User">
+                    </div>
+                    <div>
+                        <div class="user-name">Admin User</div>
+                        <div class="user-role">Admin</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-menu">
+                <h3>Main Menu</h3>
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="admin-articles.html" class="active"><i class="fas fa-newspaper"></i> Manage
+                            Articles</a></li>
+                    <li><a href="admin-products.html"><i class="fas fa-coffee"></i> Manage Products</a></li>
+                    <li><a href="admin-users.html"><i class="fas fa-users"></i> Manage Users</a></li>
+                    <li><a href="admin-transactions.html"><i class="fas fa-receipt"></i> Manage Transactions</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-menu">
+                <h3>Account</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-user-cog"></i> Settings</a></li>
+                    <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="admin-header">
+                <h1>Manage Articles</h1>
+                <div class="header-actions">
+                    <button class="btn" id="new-article-btn"><i class="fas fa-plus"></i> New Article</button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table-header">
+                    <h2>Semua Artikel</h2>
+                    <div class="table-actions">
+                        <div class="search-box">
+                            <input type="text" placeholder="Cari Artikel..." id="search-articles">
+                        </div>
+                        <select class="filter-select" id="category-filter">
+                            <option value="all">Semua Kategori</option>
+                            <option value="Teknik Penyeduhan">Teknik Penyeduhan</option>
+                            <option value="Biji Kopi">Biji Kopi</option>
+                            <option value="Budaya Kopi">Budaya Kopi</option>
+                            <option value="Resep">Resep</option>
+                        </select>
+                    </div>
+                </div>
+
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Author</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="articles-table-body">
+                        <!-- Articles will be loaded here dynamically -->
+                    </tbody>
+                </table>
+
+                <div class="table-footer">
+                    <div class="showing-entries" id="showing-entries">
+                        Showing 1 to 5 of 6 entries
+                    </div>
+                    <div class="table-pagination" id="table-pagination">
+                        <!-- Pagination will be generated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Form Modal -->
+    <div class="modal" id="article-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Add New Article</h2>
+                <button class="close-btn" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="article-form">
+                    <input type="hidden" id="article-id">
+                    <div class="form-group">
+                        <label for="article-title">Judul Artikel</label>
+                        <input type="text" id="article-title" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="article-category">Kategori</label>
+                            <select id="article-category" required>
+                                <option value="">Pilih Kategori</option>
+                                <option value="Teknik Penyeduhan">Teknik Penyeduhan</option>
+                                <option value="Biji Kopi">Biji Kopi</option>
+                                <option value="Budaya Kopi">Budaya Kopi</option>
+                                <option value="Resep">Resep</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="article-author">Author</label>
+                            <input type="text" id="article-author" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="article-image">Image URL</label>
+                        <input type="url" id="article-image" placeholder="https://example.com/image.jpg" required>
+                        <small>Enter a URL for the article image</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="article-intro">Introduction</label>
+                        <textarea id="article-intro" rows="3" required></textarea>
+                        <small>A brief introduction that will appear in article listings</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="article-content">Content</label>
+                        <textarea id="article-content" rows="10" required></textarea>
+                        <small>The main content of the article. You can use HTML tags for formatting.</small>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="article-tags">Tags</label>
+                            <input type="text" id="article-tags" placeholder="coffee, brewing, etc.">
+                            <small>Comma-separated list of tags</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="article-status">Status</label>
+                            <select id="article-status" required>
+                                <option value="published">Published</option>
+                                <option value="draft">Draft</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancel-article">Cancel</button>
+                        <button type="submit" class="btn">Save Article</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="modal" id="delete-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Confirm Delete</h2>
+                <button class="close-btn" id="close-delete-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this article? This action cannot be undone.</p>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancel-delete">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirm-delete">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth-check.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/admin-articles.js"></script>
+</body>
+
+</html>
