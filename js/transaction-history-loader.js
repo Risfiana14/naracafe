@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
           <div class="order-actions">
-            <button class="btn-outline view-details">View Details</button>
+            <button class="btn view-details">View Details</button>
             <button class="btn reorder">Reorder</button>
           </div>
         </div>
