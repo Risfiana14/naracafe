@@ -194,7 +194,10 @@ function renderProducts(products) {
         <div class="product-image">
           <img src="${product.image}" alt="${
       product.name
-    }" onerror="this.src='assets/images/no-image.jpg'">
+    }" onerror="this.src='assets/images/matcha.jpg'">
+          <img src="${product.image}" alt="${
+      product.name
+    }" onerror="this.src='assets/images/nasi-goreng.jpg'">
 
           <div class="product-actions">
             <button class="action-btn quick-view" data-id="${
