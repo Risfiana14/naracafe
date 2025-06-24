@@ -58,16 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const total = getTotal();
   document.getElementById("total-amount").textContent = "Total: Rp " + formatRupiah(total);
 
-  const qrCodeDiv = document.getElementById("qr-code");
-  const confirmQrisBtn = document.getElementById("confirm-qris-btn");
-  const qrisInput = document.getElementById("qris");
+
   const tunaiInput = document.getElementById("tunai");
   const placeOrderBtn = document.getElementById("place-order-btn");
 
-  qrisInput.addEventListener("change", () => {
-    qrCodeDiv.style.display = "block";
-    confirmQrisBtn.style.display = "inline-block";
-  });
+
 
   tunaiInput.addEventListener("change", () => {
     qrCodeDiv.style.display = "none";
@@ -80,11 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "order-confirmation.html";
   });
 
-  confirmQrisBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    saveOrderDetails("QRIS");
-    window.location.href = "order-confirmation.html";
-  });
+
 
   const userData = JSON.parse(localStorage.getItem("user"));
   if (userData && userData.email) {
