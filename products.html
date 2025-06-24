@@ -100,6 +100,15 @@
         </div>
     </footer>
 
+    <button onclick="clearProducts()" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 15px; background: darkred; color: white; border: none; border-radius: 5px; z-index: 9999;">Reset Produk</button>
+<script>
+  function clearProducts() {
+    localStorage.removeItem("adminProducts");
+    alert("Produk berhasil direset. Silakan refresh halaman.");
+  }
+</script>
+
+
     <script src="js/products.js"></script>
     <script src="js/auth-check.js"></script>
     <script src="js/redirect.js"></script>
