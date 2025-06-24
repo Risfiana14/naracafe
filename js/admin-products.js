@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 44000,
       stock: 100,
       status: "active",
-      image: "images/Matcha.jpg",
+      image: "assets/images/matcha.jpg",
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 36000,
       stock: 50,
       status: "active",
-      image: "images/Butter-Croissant.jpg",
+      image: "assets/images/butter-croissant.jpg",
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 40000,
       stock: 80,
       status: "active",
-      image: "images/Caramel-Macchiato.jpg",
+      image: "assets/images/caramel-macchiato.jpg",
     },
     {
       id: 4,
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 37000,
       stock: 75,
       status: "active",
-      image: "images/Caramel-Latte.jpg",
+      image: "assets/images/caramel-latte.jpg",
     },
     {
       id: 5,
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 29000,
       stock: 60,
       status: "active",
-      image: "images/Jasmine-Green-Tea.jpg",
+      image: "assets/images/jasmine-green-tea.jpg",
     },
     {
       id: 6,
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 25000,
       stock: 30,
       status: "active",
-      image: "images/crispy-chicken.jpg",
+      image: "assets/images/crispy-chicken.jpg",
     },
     {
       id: 7,
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 41000,
       stock: 35,
       status: "active",
-      image: "images/chicken-katsu.jpg",
+      image: "assets/images/chicken-katsu.jpg",
     },
     {
       id: 8,
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 20000,
       stock: 25,
       status: "active",
-      image: "images/nasi-goreng.jpg",
+      image: "assets/images/nasi-goreng.jpg",
     },
   ];
 
