@@ -1,0 +1,60 @@
+/* ======= Mobile Nav ======= */
+@media (max-width: 768px) {
+    nav {
+      display: none;
+      flex-direction: column;
+      background-color: white;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 20px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+  
+    nav.active {
+      display: flex;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 15px;
+      padding-left: 0;
+    }
+  
+    nav ul li {
+      list-style: none;
+    }
+  
+    nav ul li a {
+      font-size: 16px;
+      color: #333;
+      text-decoration: none;
+      padding: 8px 0;
+      display: block;
+      border-bottom: 1px solid #eee;
+    }
+  
+    .mobile-menu {
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
+      color: #4a3520;
+    }
+  
+    body.menu-open {
+      overflow: hidden;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .mobile-menu {
+      display: none;
+    }
+  
+    nav {
+      display: flex !important;
+    }
+  }
+  

@@ -1,4 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Toggle mobile menu
+  document.addEventListener("DOMContentLoaded", () => {
+    const mobileMenuButton = document.querySelector(".mobile-menu");
+    const navMenu = document.querySelector("nav");
+    const body = document.body;
+
+    if (mobileMenuButton && navMenu) {
+      mobileMenuButton.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        body.classList.toggle("menu-open");
+      });
+
+      // Optional: Close menu when clicking on a nav link (UX enhancement)
+      navMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          body.classList.remove("menu-open");
+        });
+      });
+    }
+  });
+
   console.log("Products page script loaded");
 
   // Load products from admin data
@@ -53,7 +75,7 @@ function initializeDefaultProducts() {
       price: 44000,
       stock: 100,
       status: "active",
-      image: "https://via.placeholder.com/300x200?text=Matcha",
+      image: "images/Matcha.jpg",
     },
     {
       id: 2,
@@ -64,7 +86,7 @@ function initializeDefaultProducts() {
       price: 36000,
       stock: 50,
       status: "active",
-      image: "https://via.placeholder.com/300x200?text=Butter+Croissant",
+      image: "images/Butter-Croissant.jpg",
     },
     {
       id: 3,
@@ -74,7 +96,7 @@ function initializeDefaultProducts() {
       price: 40000,
       stock: 80,
       status: "active",
-      image: "https://via.placeholder.com/300x200?text=Caramel+Macchiato",
+      image: "images/Caramel-Macchiato.jpg",
     },
     {
       id: 4,
@@ -84,7 +106,7 @@ function initializeDefaultProducts() {
       price: 37000,
       stock: 75,
       status: "active",
-      image: "https://via.placeholder.com/300x200?text=Caramel+Latte",
+      image: "images/Caramel-Latte.jpg",
     },
     {
       id: 5,
@@ -94,7 +116,7 @@ function initializeDefaultProducts() {
       price: 29000,
       stock: 60,
       status: "active",
-      image: "https://via.placeholder.com/300x200?text=Jasmine+Green+Tea",
+      image: "images/Jasmine-Green-Tea.jpg",
     },
     {
       id: 6,
@@ -104,7 +126,7 @@ function initializeDefaultProducts() {
       price: 25000,
       stock: 30,
       status: "active",
-      image: "https://via.placeholder.com/300x200?text=Crispy+Chicken",
+      image: "images/crispy-chicken.jpg",
     },
     {
       id: 7,
@@ -114,7 +136,7 @@ function initializeDefaultProducts() {
       price: 41000,
       stock: 35,
       status: "active",
-      image: "https://via.placeholder.com/300x200?text=Chicken+Katsu",
+      image: "images/chicken-katsu.jpg",
     },
     {
       id: 8,
@@ -124,7 +146,7 @@ function initializeDefaultProducts() {
       price: 20000,
       stock: 25,
       status: "active",
-      image: "https://via.placeholder.com/300x200?text=Nasi+Goreng",
+      image: "images/nasi-goreng.jpg",
     },
   ];
 

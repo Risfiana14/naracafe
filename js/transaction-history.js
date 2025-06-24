@@ -1,4 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
+    const mobileMenuButton = document.querySelector(".mobile-menu");
+    const navMenu = document.querySelector("nav");
+    const body = document.body;
+
+    if (mobileMenuButton && navMenu) {
+      mobileMenuButton.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        body.classList.toggle("menu-open");
+      });
+
+      navMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          body.classList.remove("menu-open");
+        });
+      });
+    }
+  });
+  
+
   // Filter functionality
   const orderFilter = document.getElementById("order-filter");
   const orderCards = document.querySelectorAll(".order-card");

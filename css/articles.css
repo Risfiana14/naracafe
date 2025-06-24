@@ -1,0 +1,54 @@
+/* ======= Mobile Nav Support ======= */
+@media (max-width: 768px) {
+    nav {
+      display: none;
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      padding: 20px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+  
+    nav.active {
+      display: flex;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    nav ul li a {
+      font-size: 16px;
+      padding: 10px;
+      color: #333;
+      border-bottom: 1px solid #eee;
+      display: block;
+    }
+  
+    .mobile-menu {
+      display: block;
+      font-size: 24px;
+      color: #4a3520;
+      cursor: pointer;
+    }
+  
+    body.menu-open {
+      overflow: hidden;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .mobile-menu {
+      display: none;
+    }
+  
+    nav {
+      display: flex !important;
+    }
+  }
+  

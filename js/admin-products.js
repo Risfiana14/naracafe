@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 44000,
       stock: 100,
       status: "active",
-      image: "assets/images/matcha.jpg",
+      image: "images/Matcha.jpg",
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 36000,
       stock: 50,
       status: "active",
-      image: "assets/images/butter_croissant.jpg",
+      image: "images/Butter-Croissant.jpg",
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 40000,
       stock: 80,
       status: "active",
-      image: "assets/images/caramel_macchiato.jpg",
+      image: "images/Caramel-Macchiato.jpg",
     },
     {
       id: 4,
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 37000,
       stock: 75,
       status: "active",
-      image: "assets/images/caramel_latte.jpg",
+      image: "images/Caramel-Latte.jpg",
     },
     {
       id: 5,
@@ -52,39 +52,37 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 29000,
       stock: 60,
       status: "active",
-      image: "assets/images/jasmine_green_tea.jpg",
+      image: "images/Jasmine-Green-Tea.jpg",
     },
     {
       id: 6,
       name: "Crispy Chicken",
-      description:
-        "Keunggulan utama dari Crispy Chicken adalah teksturnya yang renyah dan lapisan luar yang lezat.",
+      description: "Tekstur renyah dan lapisan luar yang lezat.",
       category: "Heavy Food",
       price: 25000,
       stock: 30,
       status: "active",
-      image: "assets/images/crispy_chicken.jpg",
+      image: "images/crispy-chicken.jpg",
     },
     {
       id: 7,
       name: "Chicken Katsu",
-      description:
-        "Ayam fillet yang digoreng renyah dengan tepung roti khas Jepang, disajikan dengan saus katsu yang penuh nikmat.",
+      description: "Ayam fillet digoreng renyah dengan saus katsu.",
       category: "Heavy Food",
       price: 41000,
       stock: 35,
       status: "active",
-      image: "assets/images/chicken_katsu.jpg",
+      image: "images/chicken-katsu.jpg",
     },
     {
       id: 8,
       name: "Nasi Goreng",
-      description: "Nasi goreng spesial dengan topping udang dan telor",
+      description: "Nasi goreng spesial dengan topping udang dan telor.",
       category: "Heavy Food",
       price: 20000,
       stock: 25,
       status: "active",
-      image: "assets/images/nasi_goreng.jpg",
+      image: "images/nasi-goreng.jpg",
     },
   ];
 

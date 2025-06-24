@@ -1,4 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
+    // Mobile menu toggle
+    const mobileMenuButton = document.querySelector(".mobile-menu");
+    const navMenu = document.querySelector("nav");
+    const body = document.body;
+
+    if (mobileMenuButton && navMenu) {
+      mobileMenuButton.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        body.classList.toggle("menu-open");
+      });
+
+      // Optional: Tutup menu saat klik link di mobile
+      navMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (navMenu.classList.contains("active")) {
+            navMenu.classList.remove("active");
+            body.classList.remove("menu-open");
+          }
+        });
+      });
+    }
+  });
+  
   const cartItemsContainer = document.querySelector(".cart-items");
 
   let cart = JSON.parse(localStorage.getItem("cart")) || [];

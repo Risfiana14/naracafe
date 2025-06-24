@@ -1,4 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Tambahkan ini di akhir file articles.js
+  document.addEventListener("DOMContentLoaded", () => {
+    const mobileMenuButton = document.querySelector(".mobile-menu");
+    const navMenu = document.querySelector("nav");
+    const body = document.body;
+
+    if (mobileMenuButton && navMenu) {
+      mobileMenuButton.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        body.classList.toggle("menu-open");
+      });
+
+      navMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          body.classList.remove("menu-open");
+        });
+      });
+    }
+  });
+
   // Load articles from localStorage
   const loadArticlesFromStorage = () => {
     const savedArticles = localStorage.getItem("articles");
