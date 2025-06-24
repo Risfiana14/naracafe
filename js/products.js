@@ -194,7 +194,8 @@ function renderProducts(products) {
         <div class="product-image">
           <img src="${product.image}" alt="${
       product.name
-    }" onerror="this.src='https://via.placeholder.com/300x200?text=No+Image'">
+    }" onerror="this.src='assets/images/no-image.jpg'">
+
           <div class="product-actions">
             <button class="action-btn quick-view" data-id="${
               product.id
