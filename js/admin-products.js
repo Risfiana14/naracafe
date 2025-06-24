@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const defaultProducts = [
     {
       id: 1,
-      name: "Cappuccino",
-      description: "Espresso yang kaya dengan susu dan busa lembut.",
-      category: "Coffee",
-      price: 34000,
+      name: "Matcha",
+      description: "Minuman teh hijau yang disajikan dengan susu segar.",
+      category: "Non Coffee",
+      price: 44000,
       stock: 100,
       status: "active",
       image:
-        "https://i.pinimg.com/736x/64/57/3b/64573b32f8ec76e81973bedf5c3357fa.jpg",
+        "https://i.pinimg.com/736x/bb/71/33/bb713338be758d8c0cdad5117931fa4f.jpg",
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       stock: 50,
       status: "active",
       image:
-        "https://images.unsplash.com/photo-1579888944880-d98341245702?auto=format&fit=crop&w=634&q=80",
+        "https://i.pinimg.com/736x/3a/cf/e0/3acfe08e77f563b19f90c7c6353fc7a2.jpg",
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       stock: 80,
       status: "active",
       image:
-        "https://i.pinimg.com/736x/bd/de/a0/bddea0e4dbe2f7a9cffa8cab5194cb74.jpg",
+        "https://i.pinimg.com/736x/0d/87/b7/0d87b7503518acbce8cc2284f608b2d0.jpg",
     },
     {
       id: 4,
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       stock: 60,
       status: "active",
       image:
-        "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=634&q=80",
+        "https://i.pinimg.com/736x/59/51/3f/59513f458ee89e204e4aaddff1082415.jpg",
     },
     {
       id: 6,
@@ -69,7 +69,30 @@ document.addEventListener("DOMContentLoaded", () => {
       stock: 30,
       status: "active",
       image:
-        "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=634&q=80",
+        "https://i.pinimg.com/736x/f3/7d/5a/f37d5a46f703d4667239275386af9308.jpg",
+    },
+    {
+      id: 7,
+      name: "Chicken Katsu",
+      description:
+        "Ayam fillet yang digoreng renyah dengan tepung roti khas Jepang, disajikan dengan saus katsu yang penuh nikmat.",
+      category: "Heavy Food",
+      price: 41000,
+      stock: 35,
+      status: "active",
+      image:
+        "https://i.pinimg.com/736x/53/ec/95/53ec951f4576db419b1d531c7dad2c6b.jpg",
+    },
+    {
+      id: 8,
+      name: "Nasi Goreng",
+      description: "Nasi goreng spesial dengan topping udang dan telor",
+      category: "Heavy Food",
+      price: 20000,
+      stock: 25,
+      status: "active",
+      image:
+        "https://i.pinimg.com/736x/1c/69/90/1c6990a506575a673f5bb4730934e117.jpg",
     },
   ];
 
