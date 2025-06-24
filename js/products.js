@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Toggle mobile menu
-  document.addEventListener("DOMContentLoaded", () => {
     const mobileMenuButton = document.querySelector(".mobile-menu");
     const navMenu = document.querySelector("nav");
     const body = document.body;
@@ -19,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
     }
-  });
+ 
 
   console.log("Products page script loaded");
 
